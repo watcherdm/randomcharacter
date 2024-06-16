@@ -10,8 +10,6 @@ jobs:
       - image: cimg/python:3.11
     steps:
       - checkout
-      - run: sudo apt-get update
-      - run: sudo apt-get install mysql-client
       - run: whoami
       - run:
           name: install dockerize
@@ -86,4 +84,4 @@ workflows:
       - build-push-prod:
           filters:
             branches:
-              only: main
+              only: master
